@@ -27,3 +27,10 @@ let copyCount = 0;
       copyCountElement.textContent = copyCount;
     });
   });
+/*calling function*/
+document.querySelectorAll(".call-btn").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    const serviceName = btn.dataset.name;
+    alert("Calling " + serviceName);
+  });
+});
