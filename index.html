@@ -25,13 +25,13 @@
                 <i class="fa-solid fa-coins text-yellow-500"></i>
             </div>
             <button class="flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2 rounded-full transition">
-                <i class="fa-solid fa-copy"></i>
+                <span id="copyCount" class="ml-2 text-white">0</span>
                 <span>Copy</span>
             </button>
         </div>
     </header>
     <!-- Header Banner -->
-    <section class="mb-8 w-full text-center py-12 text-white bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]">
+    <section class="w-full text-center py-12 text-white bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]">
         <div class="flex justify-center mb-4">
             <img src="assets/logo.png" alt="logo" class="w-20 h-20">
         </div>
@@ -40,7 +40,7 @@
     </section>
     <!-- Header Banner End-->
      <!-- Cards And Call History-->
-    <section class="flex flex-col lg:flex-row gap-6">
+    <section class="p-8 flex flex-col lg:flex-row gap-6">
         <!-- Cards Section -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
         <!-- Card 1: National Emergency -->
@@ -56,7 +56,7 @@
                 <p class="text-2xl font-bold mt-2">999</p>
                 <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full mt-2 w-fit">All</span>
                 <div class="flex gap-2 mt-4">
-                    <button class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100">Copy</button>
+                    <button class="copy-btn copy-number flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100" data-number="999">Copy</button>
                     <button class="flex-1 bg-green-500 text-white rounded-lg py-2 hover:bg-green-600"><i class="fa-solid fa-phone mr-1"></i> Call</button>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                 <p class="text-2xl font-bold mt-2">999</p>
                 <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full mt-2 w-fit">Police</span>
                 <div class="flex gap-2 mt-4">
-                    <button class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100">Copy</button>
+                    <button class="copy-btn copy-number flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100" data-number="999">Copy</button>
                     <button class="flex-1 bg-green-500 text-white rounded-lg py-2 hover:bg-green-600"><i class="fa-solid fa-phone mr-1"></i> Call</button>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                 <p class="text-2xl font-bold mt-2">999</p>
                 <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full mt-2 w-fit">Fire</span>
                 <div class="flex gap-2 mt-4">
-                    <button class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100">Copy</button>
+                    <button class="copy-btn copy-number flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100" data-number="999">Copy</button>
                     <button class="flex-1 bg-green-500 text-white rounded-lg py-2 hover:bg-green-600"><i class="fa-solid fa-phone mr-1"></i> Call</button>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                 <p class="text-2xl font-bold mt-2">1994-999999</p>
                 <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full mt-2 w-fit">Health</span>
                 <div class="flex gap-2 mt-4">
-                    <button class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100">Copy</button>
+                    <button class="copy-btn copy-number flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100" data-number="1994-999999">Copy</button>
                     <button class="flex-1 bg-green-500 text-white rounded-lg py-2 hover:bg-green-600"><i class="fa-solid fa-phone mr-1"></i> Call</button>
                 </div>
             </div>
@@ -124,7 +124,7 @@
                 <p class="text-2xl font-bold mt-2">109</p>
                 <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full mt-2 w-fit">Help</span>
                 <div class="flex gap-2 mt-4">
-                    <button class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100">Copy</button>
+                    <button class="copy-btn copy-number flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100" data-number="109">Copy</button>
                     <button class="flex-1 bg-green-500 text-white rounded-lg py-2 hover:bg-green-600"><i class="fa-solid fa-phone mr-1"></i> Call</button>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                 <p class="text-2xl font-bold mt-2">106</p>
                 <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full mt-2 w-fit">Govt.</span>
                 <div class="flex gap-2 mt-4">
-                    <button class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100">Copy</button>
+                    <button class="copy-btn copy-number flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100" data-number="106">Copy</button>
                     <button class="flex-1 bg-green-500 text-white rounded-lg py-2 hover:bg-green-600"><i class="fa-solid fa-phone mr-1"></i> Call</button>
                 </div>
             </div>
@@ -158,7 +158,7 @@
                 <p class="text-2xl font-bold mt-2">16216</p>
                 <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full mt-2 w-fit">Electrity</span>
                 <div class="flex gap-2 mt-4">
-                    <button class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100">Copy</button>
+                    <button class="copy-btn copy-number flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100" data-number="16216">Copy</button>
                     <button class="flex-1 bg-green-500 text-white rounded-lg py-2 hover:bg-green-600"><i class="fa-solid fa-phone mr-1"></i> Call</button>
                 </div>
             </div>
@@ -175,7 +175,7 @@
                 <p class="text-2xl font-bold mt-2">16247</p>
                 <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full mt-2 w-fit">NGO</span>
                 <div class="flex gap-2 mt-4">
-                    <button class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100">Copy</button>
+                    <button class="copy-btn copy-number flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100" data-number="16247">Copy</button>
                     <button class="flex-1 bg-green-500 text-white rounded-lg py-2 hover:bg-green-600"><i class="fa-solid fa-phone mr-1"></i> Call</button>
                 </div>
             </div>
@@ -192,7 +192,7 @@
                 <p class="text-2xl font-bold mt-2">163</p>
                 <span class="inline-block bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full mt-2 w-fit">Travel</span>
                 <div class="flex gap-2 mt-4">
-                    <button class="flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100">Copy</button>
+                    <button class="copy-btn copy-number flex-1 border rounded-lg py-2 text-gray-600 hover:bg-gray-100" data-number="163">Copy</button>
                     <button class="flex-1 bg-green-500 text-white rounded-lg py-2 hover:bg-green-600"><i class="fa-solid fa-phone mr-1"></i> Call</button>
                 </div>
             </div>
