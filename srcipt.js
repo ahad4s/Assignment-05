@@ -27,16 +27,27 @@ let copyCount = 0;
       copyCountElement.textContent = copyCount;
     });
   });
-/*Call History & Clear History*/
+
+/*Coin Deduction and Call History*/
+let coins = 100;
+const coinElement = document.getElementById("coinCount");
 const callHistory = document.getElementById("callHistory");
 const clearBtn = document.getElementById("clearHistory");
 
 document.querySelectorAll(".call-btn").forEach(btn => {
   btn.addEventListener("click", () => {
+
+    if (coins < 20) {
+      alert("You don't have enough coin to call: minimum 20 coin required...");
+      return; //
+    }
+    coins -= 20;
+    coinElement.textContent = coins;
+
     const serviceName = btn.dataset.name;
     const serviceNumber = btn.dataset.number;
 
-    alert("Calling " + serviceName + serviceNumber);
+    alert("Calling " + serviceName + " " + serviceNumber);
 
     const now = new Date();
     const time = now.toLocaleTimeString();
